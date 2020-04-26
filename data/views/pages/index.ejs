@@ -9,29 +9,74 @@
     <main>
 
 
+<% po.forEach(data => { %>
+    <%=data.name%>
+    <%=data.img%>
+    <%=data.level%>
 
+    <}%>
 
+    <form action="/searches" method="POST">
+     <input name="search" placeholder="enter name" >
+     <button> search po api</button>
+    </form>
 
+    <form action="/searches" method="POST">
+        <input type="hidden" id="custId" name="custId" value="<po.name>"/>
+        <input type="hidden" id="custId" name="custId" value="<po.img>"/>
+        <input type="hidden" id="custId" name="custId" value="<po.level>"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <button> view details</button>
+       </form>
+   
         
+
+    <form action="/detail">
+        <label for="fname"></label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <input type="hidden" id="custId" name="custId" value="name">
+        <input type="hidden" id="custId" name="custId" value="img">
+        <input type="hidden" id="custId" name="custId" value="img">
+        <input type="submit" value="Submit">
+        <b
+      </form>
+
+
+<form action="/update">
+  <label for="fname"></label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="hidden" id="custId" name="custId" value="name">
+  <input type="hidden" id="custId" name="custId" value="img">
+  <input type="hidden" id="custId" name="custId" value="img">
+  <input type="submit" value="Submit">
+</form>
+
+
+
+<form action="/delet">
+    <label for="fname"></label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <input type="hidden" id="custId" name="custId" value="id">
+    <input type="submit" value="Submit">
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
 </body>
 </html>

@@ -108,6 +108,14 @@ if(req.body&& typeof req.body === "object"&&'_method'in req.body){
 
 };
 
+function PO (data){
+this.name=data.name;
+this.img=data.img;
+this.level=data.level;
+
+
+}
+
 client.connect()
 .then(()=>{
     app.listen(PORT,() =>
